@@ -67,23 +67,23 @@ const App = () => {
     }
   };
 
-  const loadTrendingMovies = async () => {
-    try {
-      const movies = await getTrendingMovies();
+  // const loadTrendingMovies = async () => {
+  //   try {
+  //     const movies = await getTrendingMovies();
 
-      setTrendingMovies(movies);
-    } catch (error) {
-      console.error(`Error fetching trending movies: ${error}`);
-    }
-  };
+  //     setTrendingMovies(movies);
+  //   } catch (error) {
+  //     console.error(`Error fetching trending movies: ${error}`);
+  //   }
+  // };
 
   useEffect(() => {
     fetchMovies(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
 
-  useEffect(() => {
-    loadTrendingMovies();
-  }, []);
+  // useEffect(() => {
+  //   loadTrendingMovies();
+  // }, []);
 
   return (
     <main>
@@ -100,7 +100,7 @@ const App = () => {
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>
 
-        {trendingMovies.length > 0 && (
+        {/* {trendingMovies.length > 0 && (
           <section className="trending">
             <h2>Trending Movies</h2>
 
@@ -113,7 +113,7 @@ const App = () => {
               ))}
             </ul>
           </section>
-        )}
+        )} */}
 
         <section className="all-movies">
           <h2>All Movies</h2>
